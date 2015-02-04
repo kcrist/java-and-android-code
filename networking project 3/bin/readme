@@ -1,0 +1,29 @@
+so how it works is that 
+gets query,passes to query handler
+query handler does all the searching for file, makes packet,
+double checks the queryid,makes sure there's no repeats
+ttl is controlled
+packet gets passed along
+
+if it gets a query input, passes along to thread
+thread parses header, passes along to queryhandler
+query handler does its job
+packet gets passes along
+
+note: old = query received as packet at this node
+and new = a query that originated at this node
+also, you have to make a query search for something first,
+before the server starts
+its hardcoded for one other node
+there are slightly different unix and windows versions
+
+
+packet form
+queryid\n
+ttl\n
+hops\n
+source\n
+query\n
+
+source of getIP method here http://stackoverflow.com/questions/9481865/how-to-get-ip-address-of-current-machine-using-java
+
